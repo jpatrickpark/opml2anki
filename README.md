@@ -5,12 +5,14 @@ Turn an opml document into an anki deck. Every non-leaf node becomes a card.
 
 ## Example usage:
 
+To create lab1.apkg using data/lec1.opml, run the following:
+
 ```bash
-mkdir lab1
-python create_deck.py data/lec1.opml > lec1/deck.md
-ankdown -r lab1 -p lab1.apkg
+python create_deck.py data/lec1.opml
 ```
+It creates lec1/deck.md file as an intermediate upon which ankdown is called.
 
 ## requirements
 
 ankdown
+argparse
